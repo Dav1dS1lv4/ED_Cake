@@ -1,3 +1,65 @@
 body{
-    background: linear-gradient(to right, #81DAF5, #58ACFA, #2E9AFE, #0080FF, #0174DF, #045FB4);
+    background: linear-gradient(to right, #015C92, #2DB2B5, #53A7DB, #88CDF6, #BCE6FF, rgb(4, 95, 180));
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    padding: 20px;
+}
+
+footer {
+    background-color: #015C92;
+    color: #fdfdfd;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.footer-section-category {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.footer-section h4 {
+    margin-bottom: 10px;
+}
+
+.footer-section p,
+.footer-section ul,
+.footer-section li {
+    margin: 5px 0;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section a {
+    color: #fafafa;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #015281;
 }
