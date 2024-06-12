@@ -59,6 +59,17 @@ footer {
     text-decoration: underline;
 }
 
+.social-media {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icon img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
+
 .footer-bottom {
     text-align: center;
     padding: 10px 0;
