@@ -89,7 +89,7 @@ footer {
     background-color: #050A30;
     color: #fdfdfd;
     width: 100%;
-    position: fixed;
+    position: relative;
     bottom: 0;
     left: 0;
 }
