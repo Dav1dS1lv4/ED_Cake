@@ -19,7 +19,7 @@ body {
 /* ------------------------- */
 
 header {
-    background-color: #050A30;
+    background-color: #5290C9;
     padding: 20px 0;
     width: 100%;
     position: fixed;
@@ -76,7 +76,7 @@ header {
 
 .nav-links a:hover {
     background-color: #fafafa;
-    color: #050A30;
+    color: #5290C9;
 }
 
 
@@ -86,7 +86,7 @@ header {
 /* ------------------------- */
 
 footer {
-    background-color: #050A30;
+    background-color: #5290C9;
     color: #fdfdfd;
     width: 100%;
     position: relative;
@@ -143,6 +143,6 @@ footer {
 .footer-bottom {
     text-align: center;
     padding: 10px 0;
-    background-color: #050A30;
+    background-color: #5290C9;
     width: 100%;
 }
