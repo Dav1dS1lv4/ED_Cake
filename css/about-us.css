@@ -83,8 +83,33 @@ header {
     padding:10px; 
 }
 
+/* ------------------------- */
+/* Content */
+/* ------------------------- */
 
+.about-content{
+    text-align: justify;
+}
+.about-title{
+    text-align: center;
+}
 
+hr{
+    opacity: 0.2;
+}
+
+.sac{
+    background-color: #5290C9;
+}
+
+.edcakes h2 {
+    color: #5290C9;
+    text-align: center;
+}
+
+ul p{
+    font-weight: bold;
+}
 /* ------------------------- */
 /* Footer */
 /* ------------------------- */
@@ -93,7 +118,7 @@ footer {
     background-color: #5290C9;
     color: #fdfdfd;
     width: 100%;
-    position: fixed;
+    position: relative;
     bottom: 0;
     left: 0;
 }
