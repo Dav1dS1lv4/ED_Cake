@@ -1,5 +1,8 @@
-body{
+
+body {
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 /* Header */
@@ -35,8 +38,7 @@ header {
 
 .search-bar {
     flex-grow: 1;
-    
-    margin: 0px 20px;
+    margin: 0 30px;
 }
 
 .search-bar input {
@@ -46,7 +48,6 @@ header {
     border-radius: 5px;
     color: black;
     border-color: black;
-    
 }
 
 .header-icons {
@@ -61,13 +62,7 @@ header {
 }
 
 .hamburger {
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.hamburger.active {
-    display: flex;
+    display: none;
     flex-direction: column;
     cursor: pointer;
 }
@@ -134,15 +129,6 @@ header {
     z-index: 998; /* Z-index abaixo do header e acima do conteúdo */
 }
 
-.category-bar a {
-    color: #fdfdfd;
-    text-decoration: none;
-    font-size: 13px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease, padding 0.3s ease;
-    padding: 10px; /* Espaçamento entre itens do menu */
-}
-
 .category-links {
     list-style: none;
     display: flex;
@@ -151,7 +137,6 @@ header {
     margin: 0 auto;
     padding: 10px 30px;
     justify-content: center;
-    
 }
 
 .category-links li {
@@ -162,16 +147,19 @@ header {
     color: #fdfdfd;
     text-decoration: none;
     font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease, padding 0.3s ease;
+    padding: 10px;
 }
 
 .category-links a:hover {
     text-decoration: underline;
 }
 
-.category-bar a:hover{
-        text-decoration: none;
-        background-color: #fafafa;
-        color: #5290C9;
+.category-bar a:hover {
+    text-decoration: none;
+    background-color: #fafafa;
+    color: #5290C9;
 }
 
 /* Footer */
@@ -186,13 +174,15 @@ footer {
 
 .footer-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     padding: 20px;
 }
 
 .footer-section {
     flex: 1;
-    margin: 0 10px;
+    margin: 10px;
+    min-width: 200px; /* Adicionado para evitar colapso de seções em telas menores */
 }
 
 .footer-section h4 {
@@ -209,7 +199,7 @@ footer {
     list-style: none;
     padding: 0;
 }
- 
+
 .footer-section a {
     color: #fafafa;
     text-decoration: none;
@@ -237,21 +227,33 @@ footer {
     width: 100%;
 }
 
-
 /* Media Queries */
 @media (max-width: 768px) {
     .header-container {
-        justify-content: space-between; /* Manter espaço entre a logo e o hamburguer */
+        justify-content: space-between;
+    }
+
+    .logo {
+        display: none; /* Ocultar logo em dispositivos móveis */
+    }
+
+    .search-bar {
+        margin: 0 10%; /* Ajustar margem para telas menores */
+    }
+
+    .search-bar input {
+        font-size: 18px;
+        padding: 10px;
     }
 
     .hamburger {
-        display: flex; /* Mostra o hamburguer */
+        display: flex; /* Mostrar menu hamburger */
     }
 
     .navbar {
-        display: none; /* Esconde o menu na tela pequena inicialmente */
+        display: none;
         position: fixed;
-        top: 100px; /* Posiciona abaixo do header */
+        top: 100px;
         left: 0;
         width: 100%;
         background-color: #5290C9;
@@ -261,16 +263,27 @@ footer {
     }
 
     .navbar.active {
-        display: flex; /* Mostra o menu quando hamburguer está ativo */
+        display: flex; /* Mostrar navbar quando ativo */
     }
 
     .nav-links {
         flex-direction: column;
         background-color: #5290C9;
-        padding: 20px 0; /* Adiciona padding vertical */
+        padding: 20px 0;
     }
 
     .nav-links a {
         padding: 10px 0;
     }
+
+    /* Responsividade do Footer */
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        margin: 10px 0;
+    }
 }
+```

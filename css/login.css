@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+
 body{
   min-height: 100vh;
   display: flex;
@@ -12,6 +14,7 @@ body{
   justify-content: center;
   background: #5290C9;
 }
+
 .wrapper{
   position: relative;
   max-width: 430px;
@@ -20,13 +23,16 @@ body{
   padding: 34px;
   border-radius: 6px;
   box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  margin: 50px auto;
 }
+
 .wrapper h2{
   position: relative;
   font-size: 22px;
   font-weight: 600;
   color: #333;
 }
+
 .wrapper h2::before{
   content: '';
   position: absolute;
@@ -37,13 +43,16 @@ body{
   border-radius: 12px;
   background: #5290C9;
 }
+
 .wrapper form{
   margin-top: 30px;
 }
+
 .wrapper form .input-box{
   height: 52px;
   margin: 18px 0;
 }
+
 form .input-box input{
   height: 100%;
   width: 100%;
@@ -57,20 +66,24 @@ form .input-box input{
   border-radius: 6px;
   transition: all 0.3s ease;
 }
+
 .input-box input:focus,
 .input-box input:valid{
   border-color: #5290C9;
 }
+
 form .policy{
   display: flex;
   align-items: center;
 }
+
 form h3{
   color: #707070;
   font-size: 14px;
   font-weight: 500;
   margin-left: 10px;
 }
+
 .input-box.button input{
   color: #fff;
   letter-spacing: 1px;
@@ -78,23 +91,26 @@ form h3{
   background: #5290C9;
   cursor: pointer;
 }
+
 .input-box.button input:hover{
   background: #2E7BB0;
 }
+
 form .text h3{
- color: #333;
- width: 100%;
- text-align: center;
+  color: #333;
+  width: 100%;
+  text-align: center;
 }
+
 form .text h3 a{
   color: #4070f4;
   text-decoration: none;
 }
+
 form .text h3 a:hover{
   text-decoration: underline;
 }
 
-/* Estilo para o botão de fechar */
 .close-btn {
   position: absolute;
   top: 0px;
@@ -111,15 +127,22 @@ form .text h3 a:hover{
   color: #000;
 }
 
-/* Wrapper styles */
-.wrapper {
-  position: relative;
-  max-width: 400px;
-  margin: 50px auto;
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  background: #fff;
-}
+/* Media Queries */
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 20px;
+    margin: 20px;
+  }
 
-/* Outros estilos já existentes */
+  .input-box input {
+    font-size: 16px;
+  }
+
+  form h3 {
+    font-size: 13px;
+  }
+
+  .close-btn {
+    font-size: 20px;
+  }
+}
