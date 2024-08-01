@@ -5,7 +5,6 @@ body {
     padding: 0;
 }
 
-/* Header */
 header {
     background-color: #5290C9;
     width: 100%;
@@ -30,30 +29,36 @@ header {
 .logo {
     display: flex;
     align-items: center;
+    margin-left: -70%; /* Ajustar conforme necessário */
 }
 
 .logo img {
-    height: 190px;
+    height: 180px; /* Manter o tamanho da imagem */
 }
 
 .search-bar {
     flex-grow: 1;
-    margin: 0 30px;
+    display: flex;
+    justify-content: flex-end; /* Alinha o conteúdo à direita */
+    margin: 30px 10px; /* Remover margem se for desnecessária */
 }
 
 .search-bar input {
-    width: 100%;
+    width: 60%;
     padding: 5px;
-    font-size: 16px;
+    font-size: 25px;
     border-radius: 5px;
     color: black;
     border-color: black;
 }
 
+/* O restante do CSS permanece o mesmo */
+
+
 .header-icons {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 20px;
 }
 
 .header-icons img {
@@ -65,6 +70,7 @@ header {
     display: none;
     flex-direction: column;
     cursor: pointer;
+        display: flex; /* Mostrar menu hamburger */
 }
 
 .hamburger span {
@@ -286,4 +292,3 @@ footer {
         margin: 10px 0;
     }
 }
-```
