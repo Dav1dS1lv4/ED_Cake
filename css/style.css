@@ -1,9 +1,12 @@
-
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
 }
+
+/* ------------------------- */
+/* Header */
+/* ------------------------- */
 
 header {
     background-color: #5290C9;
@@ -18,42 +21,43 @@ header {
 
 .header-container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
     padding: 10px 20px;
     height: 100px;
+    box-sizing: border-box; /* Inclui padding e border na altura total */
 }
 
 .logo {
     display: flex;
     align-items: center;
-    margin-left: -70%; /* Ajustar conforme necessário */
+    margin-right: 20px; /* Espaçamento à direita da logo */
 }
 
 .logo img {
-    height: 180px; /* Manter o tamanho da imagem */
+    height: 170px; /* Altura da logo */
 }
 
 .search-bar {
     flex-grow: 1;
     display: flex;
     justify-content: flex-end; /* Alinha o conteúdo à direita */
-    margin: 30px 10px; /* Remover margem se for desnecessária */
+    margin: 0 10px;
 }
 
 .search-bar input {
     width: 60%;
-    padding: 5px;
-    font-size: 25px;
+    padding: 10px;
+    font-size: 18px;
     border-radius: 5px;
     color: black;
-    border-color: black;
+    border: 2px solid black;
 }
 
-/* O restante do CSS permanece o mesmo */
-
+/* ------------------------- */
+/* Header Icons & Toggle */
+/* ------------------------- */
 
 .header-icons {
     display: flex;
@@ -70,7 +74,6 @@ header {
     display: none;
     flex-direction: column;
     cursor: pointer;
-        display: flex; /* Mostrar menu hamburger */
 }
 
 .hamburger span {
@@ -82,7 +85,10 @@ header {
     width: 25px;
 }
 
+/* ------------------------- */
 /* Navbar */
+/* ------------------------- */
+
 .navbar {
     display: none;
     position: absolute;
@@ -96,7 +102,7 @@ header {
 }
 
 .navbar.active {
-    display: flex;
+    display: flex; /* Exibe o menu quando ativo */
 }
 
 .nav-links {
@@ -126,7 +132,10 @@ header {
     color: #5290C9;
 }
 
+/* ------------------------- */
 /* Category Bar */
+/* ------------------------- */
+
 .category-bar {
     background-color: #2E7BB0;
     width: 100%;
@@ -168,7 +177,10 @@ header {
     color: #5290C9;
 }
 
+/* ------------------------- */
 /* Footer */
+/* ------------------------- */
+
 footer {
     background-color: #5290C9;
     color: #fdfdfd;
@@ -233,27 +245,32 @@ footer {
     width: 100%;
 }
 
+/* ------------------------- */
 /* Media Queries */
+/* ------------------------- */
+
 @media (max-width: 768px) {
     .header-container {
         justify-content: space-between;
     }
 
     .logo {
-        display: none; /* Ocultar logo em dispositivos móveis */
+        display: flex;
+        margin-left: 10px; /* Ajusta a margem da logo */
     }
 
     .search-bar {
-        margin: 0 10%; /* Ajustar margem para telas menores */
+        margin: 0 10px; /* Ajustar margem para telas menores */
     }
 
     .search-bar input {
+        width: 70%; /* Ajusta a largura da search bar */
         font-size: 18px;
         padding: 10px;
     }
 
     .hamburger {
-        display: flex; /* Mostrar menu hamburger */
+        display: flex; /* Mostrar o menu hamburger */
     }
 
     .navbar {
@@ -269,7 +286,7 @@ footer {
     }
 
     .navbar.active {
-        display: flex; /* Mostrar navbar quando ativo */
+        display: flex; /* Exibe o menu quando ativo */
     }
 
     .nav-links {
